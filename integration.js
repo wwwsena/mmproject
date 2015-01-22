@@ -1,5 +1,5 @@
 //Git change another
-//chittisena
+//chittisena2
 selectedEquipmentData = {};
 function getEquipData(equipmentData) {
     kony.print("function     equipmentData-------------")
