@@ -1,3 +1,5 @@
+//Git change
+
 selectedEquipmentData = {};
 function getEquipData(equipmentData) {
     kony.print("function     equipmentData-------------")
@@ -9,7 +11,7 @@ function getEquipData(equipmentData) {
 }
 
 function setSoilTypeData(){
-	//alert( "selectedEquipmentData[0].SoftSoilType="+ selectedEquipmentData[0].SoftSoilType)	
+	//alert( "selectedEquipmentData[0].SoftSoilType="+ selectedEquipmentData[0].SoftSoilType)
 	if (null != selectedEquipmentData[0].SoftSoilType){
 		var soilMain = selectedEquipmentData[0].SoftSoilType;
 		//alert("soilMain="+soilMain);
@@ -27,10 +29,10 @@ function setSoilTypeData(){
 			//alert("Setting Type selectedKeyValue:"+frmVapourResp2.radSoftSoilType.selectedKeyValue);
 			frmVapourResp2.tbxDiameter.text = selectedEquipmentData[0].SoftSoilDia;
 			//alert("Setting Dia selectedKeyValue:"+frmVapourResp2.tbxDiameter.text);
-		}	
+		}
 
 	}
-	
+
 }
 
 function updateSoilTypeData(){
@@ -58,10 +60,10 @@ function updateSoilTypeData(){
 		//alert("Sending object for update:"+JSON.stringify(objectProduct));
 		//alert('Before update sync')
 	equipment_update(apcTag, objectProduct, successCallback_update , errorFailCallback_update)
-	} 
+	}
 	//frmVapourResp3.show();
 	//alert("new frmVapourResp2.radSoftSoilMain.selectedKey="+frmVapourResp2.radSoftSoilMain.selectedKey);
-	
+
 }
 
 function equipment_update(apcTag, objectProduct, successCallback_update , errorFailCallback_update){
@@ -142,8 +144,8 @@ function updateGuyWireData(){
 						,GuyWireQG:frmVapourResp2.radGuyWireQG.selectedKey
 						,GuyWireQH:frmVapourResp2.radGuyWireQH.selectedKey
 						,GuyWireQI:frmVapourResp2.radradGuyWireQIDetails.selectedKey};
-	Equipment.update("where APCTag = " + apcTag, objectProduct, successCallback_updateGuyWire , errorFailCallback_updateGuyWire)	
-	
+	Equipment.update("where APCTag = " + apcTag, objectProduct, successCallback_updateGuyWire , errorFailCallback_updateGuyWire)
+
 }
  function successCallback_updateGuyWire(ressssstwert)
  {
@@ -158,7 +160,7 @@ kony.print("some guywire data update error is there @@@@@");
 
 function setSoilTypeDataForked(){
 //alert( "selectedEquipmentData[0].SoftSoilType="+ selectedEquipmentData[0].SoftSoilType)
-	
+
 	if (null != selectedEquipmentData[0].SoftSoilType){
 	var soilMain = selectedEquipmentData[0].SoftSoilType;
 	//alert("soilMain="+soilMain);
@@ -184,10 +186,10 @@ function setSoilTypeDataForked(){
 				btnObj.skin = btnUnCheck;
 			}
 		}
-	}	
+	}
 
 	}
-	
+
 }
 
 function setGuyWireDataForked(){
@@ -230,7 +232,7 @@ function setGuyWireDataForked(){
 	}
 	//setCheckUnCheck(selectedEquipmentData[0].GuyWireQI,"I");
 	//btnWireIDetails6
-	
+
 }
 
 function setCheckUnCheck(towerSelection,towerIndex){
@@ -358,7 +360,7 @@ function updateSoilTypeDataForked(){
 		//alert('Before update sync')
 	Equipment.update("where APCTag = " + apcTag, objectProduct, successCallback_update , errorFailCallback_update)
 	} else{
-		var stringType = "null"; 
+		var stringType = "null";
 		for (i = 1; i < 8; i++){
 			var btnObj = eval("frmVapourResp2.btnSoilType"+i);
 			if (btnObj.skin == btnCheck){
@@ -372,10 +374,10 @@ function updateSoilTypeDataForked(){
 		//alert("Sending object for update:"+JSON.stringify(objectProduct));
 		//alert('Before update sync')
 	Equipment.update("where APCTag = " + apcTag, objectProduct, successCallback_update , errorFailCallback_update)
-	} 
+	}
 	//frmVapourResp3.show();
 	//alert("new frmVapourResp2.radSoftSoilMain.selectedKey="+frmVapourResp2.radSoftSoilMain.selectedKey);
-	
+
 }
 
 function updateGuyWireDataForked(){
@@ -397,7 +399,7 @@ function updateGuyWireDataForked(){
 				break;
 			}
 		}
-		
+
 	var objectProduct = {GuyWireMain:strGuyMain
 						,GuyWireCond:frmVapourResp2.cbxTower.selectedKey
 						,GuyWireQA:(frmVapourResp2.btnWireA1.skin == btnCheck)?"1":"2"
@@ -409,6 +411,6 @@ function updateGuyWireDataForked(){
 						,GuyWireQG:(frmVapourResp2.btnWireG1.skin == btnCheck)?"1":"2"
 						,GuyWireQH:(frmVapourResp2.btnWireH1.skin == btnCheck)?"1":"2"
 						,GuyWireQI:strGuyQI};
-	Equipment.update("where APCTag = " + apcTag, objectProduct, successCallback_updateGuyWire , errorFailCallback_updateGuyWire)	
-	
+	Equipment.update("where APCTag = " + apcTag, objectProduct, successCallback_updateGuyWire , errorFailCallback_updateGuyWire)
+
 }
