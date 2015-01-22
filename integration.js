@@ -1,4 +1,4 @@
-//Git change
+//Git change another
 
 selectedEquipmentData = {};
 function getEquipData(equipmentData) {
